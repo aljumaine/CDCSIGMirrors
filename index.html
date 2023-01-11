@@ -6,15 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIG Prototype - Mirrors</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-
-    <style>
-        .draggable {
-            width: 50%;
-            height: 50%;
-            object-fit: contain;
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -23,9 +15,20 @@
             $(".draggable").draggable();
         });
     </script>
+    <script>
+        function myFunction() {
+            var img = document.getElementById("image");
+            img.setAttribute("class", "rotated-image");
+        }
+    </script>
+    <script src="screenshot.js"></script>
 </head>
 
 <body>
+
+    <div>
+        <button type="button" class="btn btn-default">Click to take a screenshot!</button>
+    </div>
 
     <div class="draggable" class="ui-widget-content">
         <p></p>
@@ -1116,6 +1119,6 @@
         <img src="MirrorFS_FSC-B-539 6.png">
     </div>
 
-</body>
+</body>f
 
 </html>

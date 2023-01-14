@@ -17,13 +17,19 @@
             $(".draggable").draggable();
         });
     </script>
+
     <script>
-        function myFunction() {
-            var img = document.getElementById("image");
-            img.setAttribute("class", "rotated-image");
-        }
+        $(document).ready(function() {
+            var degree = 0;
+            $("#my-image").click(function() {
+                degree += 5;
+                $(this).css({
+                    'transform': 'rotate(' + degree + 'deg)'
+                });
+            });
+        });
     </script>
-    <script src="canvas2image.js"></script>
+
 </head>
 
 <body>
@@ -33,9 +39,10 @@
         </div>
 
         <div class="parent rotated-image">
+
             <div class="draggable div1 rotated-image" class="ui-widget-content">
                 <p></p>
-                <img src="MirrorFC_FSC-B-24 1.png">
+                <img id="my-image" src="MirrorFC_FSC-B-24 1.png">
             </div>
 
             <div class="draggable div2 rotated-image" class="ui-widget-content">
